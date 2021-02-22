@@ -29,14 +29,14 @@ require('telescope').setup {
 require('telescope').load_extension('fzy_native')
 EOF
 
-nnoremap <leader><silent>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
-nnoremap <leader><silent>ff :lua require('telescope.builtin').find_files()<CR>
+nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+nnoremap <leader>ff :lua require('telescope.builtin').find_files()<CR>
 
-nnoremap <leader><silent>pw :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
-nnoremap <leader><silent>fb :lua require('telescope.builtin').buffers()<CR>
-nnoremap <leader><silent>vh :lua require('telescope.builtin').help_tags()<CR>
+nnoremap <leader>pw :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
+nnoremap <leader>fb :lua require('telescope.builtin').buffers()<CR>
+nnoremap <leader>vh :lua require('telescope.builtin').help_tags()<CR>
 
-nnoremap <leader><silent>gh <cmd>lua require('telescope.builtin').git_bcommits()<cr>
-nnoremap <leader><silent>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
-nnoremap <leader><silent>gs <cmd>lua require('telescope.builtin').git_status()<cr>
-nnoremap <leader><silent>gg <cmd>lua require('telescope.builtin').git_files()<CR>
+nnoremap <leader>gh <cmd>lua require('telescope.builtin').git_bcommits()<cr>
+nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
+nnoremap <leader>gs <cmd>lua require('telescope.builtin').git_status()<cr>
+nnoremap <leader>gg <cmd>lua require('telescope.builtin').git_files()<CR>

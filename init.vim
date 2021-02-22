@@ -64,7 +64,7 @@ lua require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_atta
 lua require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.intelephense.setup{on_attach=require'completion'.on_attach}
 
-let g:completion_matching_smart_case = 1
+" let g:completion_matching_smart_case = 1
 let g:completion_enable_snippet = 'UltiSnips'
 
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
@@ -103,6 +103,11 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
+
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 
 " Auto-format *.rs files prior to saving them
 autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 1000)

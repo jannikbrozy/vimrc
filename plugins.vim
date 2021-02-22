@@ -39,8 +39,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-Plug 'chuling/ci_dark'
-
 Plug 'tpope/vim-surround'
 
 Plug 'ctrlpvim/ctrlp.vim'
@@ -69,4 +67,5 @@ Plug 'romainl/Apprentice'
 Plug 'anott03/nvim-lspinstall'
 Plug 'chrisbra/sudoedit.vim'
 Plug 'albertoCaroM/completion-tmux'
+
 call plug#end()
