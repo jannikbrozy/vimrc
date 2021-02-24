@@ -67,5 +67,8 @@ Plug 'romainl/Apprentice'
 Plug 'anott03/nvim-lspinstall'
 Plug 'chrisbra/sudoedit.vim'
 Plug 'albertoCaroM/completion-tmux'
-
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'bryall/contextprint.nvim'
+Plug 'tjdevries/cyclist.vim'
+Plug 'norcalli/snippets.nvim'
 call plug#end()

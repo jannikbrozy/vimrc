@@ -49,15 +49,19 @@ let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy' ]
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 lua << EOF
+    local config = require'lspconfig'
     local pid = vim.fn.getpid()
-    local path = "/home/jannik/.omnisharp_bin/run"
 
-    require'lspconfig'.omnisharp.setup{
-        cmd = { path, "--languageserver", "--hostPID", tostring(pid) },
+    local omnisharp_dir = "/home/jannik/.omnisharp_bin/run"
+
+    config.omnisharp.setup{
+        cmd = { omnisharp_dir, "--languageserver", "--hostPID", tostring(pid) },
         on_attach = require'completion'.on_attach
     }
 EOF
 
+lua require'lspconfig'.sumneko_lua.setup{on_attach=require'completion'.on_attach}
+lua require'lspconfig'.html.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.julials.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.pyls.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_attach}
@@ -65,7 +69,7 @@ lua require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.intelephense.setup{on_attach=require'completion'.on_attach}
 
 " let g:completion_matching_smart_case = 1
-let g:completion_enable_snippet = 'UltiSnips'
+let g:completion_enable_snippet = 'snippets'
 
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.declaration()<CR>
@@ -109,5 +113,9 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+nnoremap <leader>cP :lua require("contextprint").add_statement()<CR>
+nnoremap <leader>cp :lua require("contextprint").add_statement(true)<CR>
 " Auto-format *.rs files prior to saving them
-autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 1000)
+autocmd BufWritePre  lua vim.lsp.buf.formatting_sync(nil, 1000)
+
+let g:neoterm_enabled = 1
