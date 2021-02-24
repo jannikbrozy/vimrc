@@ -71,4 +71,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'bryall/contextprint.nvim'
 Plug 'tjdevries/cyclist.vim'
 Plug 'norcalli/snippets.nvim'
+Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+Plug 'junegunn/fzf.vim'  " to enable preview (optional)
+Plug 'ojroques/nvim-lspfuzzy'
 call plug#end()

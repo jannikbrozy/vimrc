@@ -1,5 +1,6 @@
 nnoremap <SPACE> <Nop>
 let mapleader=","
+filetype plugin indent on
 
 set completeopt=menuone,noinsert,noselect
 
@@ -18,6 +19,7 @@ set updatetime=50
 set shortmess+=c
 " set colorcolumn=80
 
+set exrc
 set guicursor=
 set relativenumber
 set nohlsearch
@@ -115,7 +117,21 @@ nnoremap <leader>l :wincmd l<CR>
 
 nnoremap <leader>cP :lua require("contextprint").add_statement()<CR>
 nnoremap <leader>cp :lua require("contextprint").add_statement(true)<CR>
+"
 " Auto-format *.rs files prior to saving them
 autocmd BufWritePre  lua vim.lsp.buf.formatting_sync(nil, 1000)
-
-let g:neoterm_enabled = 1
+lua << EOF
+require('lspfuzzy').setup {
+  methods = 'all',         -- either 'all' or a list of LSP methods (see below)
+  fzf_preview = {          -- arguments to the FZF '--preview-window' option
+    'right:+{2}-/2'          -- preview on the right and centered on entry
+  },
+  fzf_action = {           -- FZF actions
+    ['ctrl-t'] = 'tabedit',  -- go to location in a new tab
+    ['ctrl-v'] = 'vsplit',   -- go to location in a vertical split
+    ['ctrl-x'] = 'split',    -- go to location in a horizontal split
+  },
+  fzf_modifier = ':~:.',   -- format FZF entries, see |filename-modifiers|
+  fzf_trim = true,         -- trim FZF entries
+}
+EOF
