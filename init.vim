@@ -62,6 +62,21 @@ lua << EOF
     }
 EOF
 
+lua <<EOF
+  lspconfig = require "lspconfig"
+  lspconfig.gopls.setup {
+    cmd = {"gopls", "serve"},
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+      },
+    },
+  }
+EOF
+
 lua require'lspconfig'.sumneko_lua.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.html.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.julials.setup{on_attach=require'completion'.on_attach}

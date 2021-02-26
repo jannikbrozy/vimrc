@@ -33,7 +33,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 
 Plug 'Yggdroot/indentLine'
 
-" Plug 'ntpeters/vim-better-whitespace'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -54,24 +53,14 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'mhinz/vim-startify'
 
 Plug 'nvim-telescope/telescope-dap.nvim'
-Plug 'cdelledonne/vim-cmake'
 
-Plug 'mfussenegger/nvim-dap'
-Plug 'ryanoasis/vim-devicons'
-Plug 'aditya-azad/candle-grey'
-Plug 'andreypopp/vim-colors-plain'
-Plug 'axvr/photon.vim'
-Plug 'ayu-theme/ayu-vim' " or other package manager
-Plug 'cocopon/iceberg.vim'
 Plug 'romainl/Apprentice'
 Plug 'anott03/nvim-lspinstall'
-Plug 'chrisbra/sudoedit.vim'
-Plug 'albertoCaroM/completion-tmux'
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'bryall/contextprint.nvim'
 Plug 'tjdevries/cyclist.vim'
 Plug 'norcalli/snippets.nvim'
-Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-Plug 'junegunn/fzf.vim'  " to enable preview (optional)
+
 Plug 'ojroques/nvim-lspfuzzy'
+Plug 'mfussenegger/nvim-dap'
+
 call plug#end()
