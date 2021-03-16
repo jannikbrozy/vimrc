@@ -44,9 +44,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/completion-nvim"
   },
-  ["complextras.nvim"] = {
+  ["completion-tabnine"] = {
     loaded = true,
-    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/complextras.nvim"
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/completion-tabnine"
   },
   ["cyclist.vim"] = {
     loaded = true,
@@ -59,6 +59,10 @@ _G.packer_plugins = {
   ["lsp-status.nvim"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/lsp-status.nvim"
+  },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

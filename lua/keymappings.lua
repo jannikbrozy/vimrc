@@ -28,6 +28,12 @@ vim.cmd([[
   tnoremap <Esc> <C-\><C-n>
 ]])
 
+vim.cmd([[
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+]])
 -- TODO fix this
 -- resize with arrows
 vim.cmd([[
@@ -55,6 +61,8 @@ vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious<CR>', { noremap = true, sile
 vim.api.nvim_set_keymap('x', 'K', ':move \'<-2<CR>gv-gv', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('x', 'J', ':move \'>+1<CR>gv-gv', { noremap = true, silent = true })
 
+-- TELESCOPE STUFF
+vim.api.nvim_set_keymap('n', '<leader> ff', '<cmd>Telescope find_files<cr>', { noremap = true, silent = true })
 
 -- Better nav for omnicomplete
 vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')

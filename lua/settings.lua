@@ -23,6 +23,7 @@ utils.opt('w', 'list', true)
 utils.opt('w', 'wrap', false)
 
 ---- global options ----
+utils.opt('o', 'cmdheight', 2)
 utils.opt('o', 'hlsearch', false)
 utils.opt('o', 'incsearch', true)
 utils.opt('o', 'hidden', true)
@@ -46,4 +47,3 @@ utils.opt('o', 'guicursor', '')
 
 vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-completion-menu|.
 vim.cmd('set clipboard+=unnamedplus')                 --Don't pass messages to |ins-completion-menu|.
-

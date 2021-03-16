@@ -55,7 +55,7 @@ return require('packer').startup(function()
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}, {'nvim-telescope/telescope-media-files.nvim'}}
   }
 
-
+  use { 'aca/completion-tabnine', run = './install.sh' }
   -- TREESITTER
 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
