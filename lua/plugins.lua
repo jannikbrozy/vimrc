@@ -20,6 +20,7 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
 
   -- LSP
+
   use { 'neovim/nvim-lspconfig' }
   use { 'ojroques/nvim-lspfuzzy' }
 
@@ -27,8 +28,9 @@ return require('packer').startup(function()
 
   use { 'anott03/nvim-lspinstall' }
 
-
   use { 'hrsh7th/nvim-compe' }
+
+  use { 'kristijanhusak/vim-dadbod-completion' }
 
   -- SNIPPETS 
 
@@ -62,6 +64,7 @@ return require('packer').startup(function()
   use { 'mhinz/vim-startify' }
 
   -- GIT
+
   use { 'tpope/vim-fugitive' }
 
   -- TELESCOPE
@@ -89,9 +92,9 @@ return require('packer').startup(function()
 
   -- NVIM-DAP
 
-  use 'mfussenegger/nvim-dap'
+  use { 'mfussenegger/nvim-dap' }
 
-  use 'theHamsta/nvim-dap-virtual-text'
+  use { 'theHamsta/nvim-dap-virtual-text' }
 
-  use 'nvim-telescope/telescope-dap.nvim'
+  use { 'nvim-telescope/telescope-dap.nvim' }
 end)

@@ -49,7 +49,6 @@ vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-comple
 vim.cmd('set clipboard+=unnamedplus')                 --Don't pass messages to |ins-completion-menu|.
 vim.cmd('set omnifunc=v:lua.vim.lsp.omnifunc')                 --Don't pass messages to |ins-completion-menu|.
 
-vim.g.dap_virtual_text = false
-vim.g.dap_virtual_text = true
-vim.g.dap_virtual_text = 'all frames'
+vim.o.completeopt = "menuone,noselect"
+
 vim.g.dap_virtual_text = true

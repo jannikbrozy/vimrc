@@ -43,6 +43,11 @@ vim.cmd([[
   nnoremap <silent> <C-Right> :vertical resize +2<CR>
 ]])
 
+vim.cmd([[
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+]])
 
 vim.cmd([[
 nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
