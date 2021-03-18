@@ -48,3 +48,8 @@ utils.opt('o', 'guicursor', '')
 vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-completion-menu|.
 vim.cmd('set clipboard+=unnamedplus')                 --Don't pass messages to |ins-completion-menu|.
 vim.cmd('set omnifunc=v:lua.vim.lsp.omnifunc')                 --Don't pass messages to |ins-completion-menu|.
+
+vim.g.dap_virtual_text = false
+vim.g.dap_virtual_text = true
+vim.g.dap_virtual_text = 'all frames'
+vim.g.dap_virtual_text = true

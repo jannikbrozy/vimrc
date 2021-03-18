@@ -86,4 +86,12 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/completion-treesitter' }
 
   use { 'nvim-lua/lsp_extensions.nvim' }
+
+  -- NVIM-DAP
+
+  use 'mfussenegger/nvim-dap'
+
+  use 'theHamsta/nvim-dap-virtual-text'
+
+  use 'nvim-telescope/telescope-dap.nvim'
 end)
