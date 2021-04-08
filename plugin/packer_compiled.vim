@@ -36,6 +36,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/Apprentice"
   },
+  ["colorbuddy.vim"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
+  },
   ["completion-treesitter"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/completion-treesitter"
@@ -44,9 +48,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/cyclist.vim"
   },
-  indentLine = {
+  edge = {
     loaded = true,
-    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/indentLine"
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/edge"
+  },
+  ["galaxyline.nvim"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+  },
+  gruvbox = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/gruvbox"
+  },
+  ["gruvbuddy.nvim"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
   ["lsp-status.nvim"] = {
     loaded = true,
@@ -55,6 +75,10 @@ _G.packer_plugins = {
   ["lsp_extensions.nvim"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/lsp_extensions.nvim"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
   ["nvim-compe"] = {
     loaded = true,
@@ -67,6 +91,10 @@ _G.packer_plugins = {
   ["nvim-dap-virtual-text"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text"
+  },
+  ["nvim-lightbulb"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-lightbulb"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -84,6 +112,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-lspupdate"
   },
+  ["nvim-terminal.lua"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-terminal.lua"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
@@ -91,6 +123,10 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -160,10 +196,6 @@ _G.packer_plugins = {
   ["vim-abolish"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/vim-abolish"
-  },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/vim-airline"
   },
   ["vim-characterize"] = {
     loaded = true,

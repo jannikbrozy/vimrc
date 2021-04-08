@@ -22,6 +22,7 @@ return require('packer').startup(function()
   -- LSP
 
   use { 'neovim/nvim-lspconfig' }
+
   use { 'ojroques/nvim-lspfuzzy' }
 
   use { 'nvim-lua/lsp-status.nvim' }
@@ -32,32 +33,54 @@ return require('packer').startup(function()
 
   use { 'kristijanhusak/vim-dadbod-completion' }
 
+  use { 'kosayoda/nvim-lightbulb' }
+
   -- SNIPPETS 
 
   use { 'norcalli/snippets.nvim' }
 
   -- THEMES & DESIGN
 
+  use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
+
+  use 'norcalli/nvim-colorizer.lua'
+
+  use 'norcalli/nvim-terminal.lua'  
+
+  use 'tjdevries/colorbuddy.vim'   
+
+  use 'tjdevries/gruvbuddy.nvim'   
+
+  use 'gruvbox-community/gruvbox'   
+
+  use 'glepnir/galaxyline.nvim'
+
   use { 'tpope/vim-surround' }
+
   use { 'romainl/Apprentice' } -- best theme
 
   use { 'tjdevries/cyclist.vim' }
-  use { 'Yggdroot/indentLine' }
 
-  use { 'vim-airline/vim-airline' }
   use { 'RRethy/vim-illuminate' }
   --
   use 'godlygeek/tabular'        -- Quickly align text by pattern
+
   use 'tpope/vim-commentary'     -- Easily comment out lines or objects
+
   use 'tpope/vim-repeat'         -- Repeat actions better
+
   use 'tpope/vim-abolish'        -- Cool things with words!
+  
   use 'tpope/vim-characterize'
+
   use 'tpope/vim-dispatch'
 
   use 'AndrewRadev/splitjoin.vim'
+
   use 'AndrewRadev/sideways.vim' -- Easy sideways movement
 
   use 'kyazdani42/nvim-web-devicons'
+
   use 'kyazdani42/nvim-tree.lua'
 
   -- STARTIFY
@@ -75,10 +98,13 @@ return require('packer').startup(function()
   }
 
   use { 'nvim-telescope/telescope-fzy-native.nvim' }
+
   use { 'nvim-telescope/telescope-fzf-writer.nvim' }
+
   use { 'nvim-telescope/telescope-packer.nvim' }
 
   use { 'nvim-telescope/telescope-github.nvim' }
+
   use { 'nvim-telescope/telescope-symbols.nvim' }
 
   use { 'alexaandru/nvim-lspupdate' }
@@ -86,9 +112,14 @@ return require('packer').startup(function()
   -- TREESITTER
 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
   use { 'nvim-treesitter/completion-treesitter' }
 
+  use { 'p00f/nvim-ts-rainbow' }
+
   use { 'nvim-lua/lsp_extensions.nvim' }
+
+  use { 'sainnhe/edge' }
 
   -- NVIM-DAP
 
@@ -97,4 +128,5 @@ return require('packer').startup(function()
   use { 'theHamsta/nvim-dap-virtual-text' }
 
   use { 'nvim-telescope/telescope-dap.nvim' }
+
 end)

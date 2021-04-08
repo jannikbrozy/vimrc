@@ -28,7 +28,6 @@ utils.opt('o', 'hlsearch', false)
 utils.opt('o', 'incsearch', true)
 utils.opt('o', 'hidden', true)
 utils.opt('o', 'errorbells', false)
-utils.opt('o', 'completeopt', 'menuone,noinsert,noselect')
 utils.opt('o', 'ignorecase', true)
 utils.opt('o', 'smartcase', true)
 utils.opt('o', 'splitbelow', true)
@@ -36,7 +35,6 @@ utils.opt('o', 'splitright', true)
 utils.opt('o', 'termguicolors', true)
 utils.opt('o', 'wildmode', 'list:longest')
 utils.opt('o', 'backup', false)
-utils.opt('o', 'undodir', "~/.local/share/nvim/undodir")
 utils.opt('o', 'undofile', true)
 utils.opt('o', 'scrolloff', 8)
 utils.opt('o', 'sidescrolloff', 8 )
@@ -48,7 +46,7 @@ utils.opt('o', 'guicursor', '')
 vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-completion-menu|.
 vim.cmd('set clipboard+=unnamedplus')                 --Don't pass messages to |ins-completion-menu|.
 vim.cmd('set omnifunc=v:lua.vim.lsp.omnifunc')                 --Don't pass messages to |ins-completion-menu|.
+vim.cmd('set undodir=~/.local/share/nvim/undodir')
 
-vim.o.completeopt = "menuone,noselect"
-
-vim.g.dap_virtual_text = true
+vim.o.completeopt = "menuone,noinsert,noselect"
+vim.g.indent_blankline_use_treesitter = "v:true"

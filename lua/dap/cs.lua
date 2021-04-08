@@ -3,28 +3,23 @@ local cwd = vim.fn.getcwd();
 local pid = vim.fn.getpid()
 
 dap.adapters.cs = {
-    type = 'executable';
-    command = '/home/jannik/.omnisharp/netcoredbg/netcoredbg';
-    args = {'--interpreter=vscode' };
+    type = "executable";
+    cwd = "/home/jannik/.omnisharp/omnisharp-vscode";
+    command = "csharp";
 }
 
 dap.configurations.cs = {
   {
-      type = 'cs';
-      request = 'launch';
-      name = "lauch .NET Core 3.1";
-      program = cwd .. "/bin/Debug/netcoreapp3.1/test.dll";
-      stopAtEntry = true;
+      type = "cs";
+      request = "launch";
+      program = "${workspaceFolder}/bin/Debug/netcoreapp3.1/test.dll";
       args = {};
-      cwd = cwd;
-  },
-  {
-      type = 'cs';
-      request = 'launch';
-      name = "lauch .NET 5.0";
-      program = cwd .. "/bin/Debug/NET5.0/test.dll";
+      name = ".NET Core Launch (console)";
       stopAtEntry = true;
-      args = {};
-      cwd = cwd;
+      console = "internalConsole";
+      serverReadyAction = {
+        action= "openExternally",
+        pattern= "\\bNow listening on:\\s+(https?://\\S+)"
+      };
   }
 }
