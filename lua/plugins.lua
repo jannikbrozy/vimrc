@@ -19,6 +19,8 @@ return require('packer').startup(function()
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim', opt = true}
 
+  use 'norcalli/nvim.lua'
+
   -- LSP
 
   use { 'neovim/nvim-lspconfig' }
@@ -34,6 +36,8 @@ return require('packer').startup(function()
   use { 'kristijanhusak/vim-dadbod-completion' }
 
   use { 'kosayoda/nvim-lightbulb' }
+
+  use { 'prettier/vim-prettier' }
 
   -- SNIPPETS 
 
@@ -53,16 +57,19 @@ return require('packer').startup(function()
 
   use 'gruvbox-community/gruvbox'   
 
+  use 'Yggdroot/indentLine'
+
   use 'glepnir/galaxyline.nvim'
 
   use { 'tpope/vim-surround' }
 
   use { 'romainl/Apprentice' } -- best theme
 
-  use { 'tjdevries/cyclist.vim' }
-
+  -- use { 'tjdevries/cyclist.vim' }
   use { 'RRethy/vim-illuminate' }
-  --
+
+  use 'tjdevries/cyclist.vim'
+
   use 'godlygeek/tabular'        -- Quickly align text by pattern
 
   use 'tpope/vim-commentary'     -- Easily comment out lines or objects
@@ -82,6 +89,12 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-web-devicons'
 
   use 'kyazdani42/nvim-tree.lua'
+
+  use { 'romgrk/barbar.nvim' }
+
+  use { 'maaslalani/nordbuddy' }
+
+  use '~/Projects/zephyr-nvim/'
 
   -- STARTIFY
   use { 'mhinz/vim-startify' }
@@ -108,18 +121,24 @@ return require('packer').startup(function()
   use { 'nvim-telescope/telescope-symbols.nvim' }
 
   use { 'alexaandru/nvim-lspupdate' }
-  --
+
   -- TREESITTER
 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-  use { 'nvim-treesitter/completion-treesitter' }
+  use { 'nvim-treesitter/nvim-treesitter-refactor' }
+
+  use {"windwp/nvim-ts-autotag"}
+
+  -- use { 'nvim-treesitter/completion-treesitter' }
+
+  use {"windwp/nvim-autopairs"}
 
   use { 'p00f/nvim-ts-rainbow' }
 
   use { 'nvim-lua/lsp_extensions.nvim' }
 
-  use { 'sainnhe/edge' }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- NVIM-DAP
 

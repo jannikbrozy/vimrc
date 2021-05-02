@@ -17,20 +17,20 @@ require('lsp.sumneko')
 require('lsp.rustls')
 require('lsp.lua-ls')
 require('lsp.bash-ls')
--- require('lsp.js-ts-ls')
+require('lsp.js-ts-ls')
 
 require('lsp.python-ls')
 require('lsp.yaml-ls')
 require('lsp.json-ls')
 require('lsp.angularls')
---require('lsp.html')
 
 -- Plugins
 require('treesitter')
 
 require('fugitive')
-require('startify')
+-- require('startify')
 require('_telescope')
 require('illuminate')
 require('_compe')
 require('_galaxyline')
+

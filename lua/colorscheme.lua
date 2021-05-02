@@ -1,1 +1,1 @@
-vim.cmd('colorscheme apprentice')
+require('colorbuddy').colorscheme('zephyr')
