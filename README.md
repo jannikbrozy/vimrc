@@ -1,2 +1,2 @@
 # vimrc
-ma settings
+clusterfuck of a neovim lua config
