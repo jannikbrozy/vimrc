@@ -83,6 +83,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
   },
+  ["completion-treesitter"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/completion-treesitter"
+  },
   ["cyclist.vim"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/cyclist.vim"
@@ -102,10 +106,6 @@ _G.packer_plugins = {
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
-  },
-  indentLine = {
-    loaded = true,
-    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/indentLine"
   },
   ["lsp-status.nvim"] = {
     loaded = true,
@@ -134,6 +134,10 @@ _G.packer_plugins = {
   ["nvim-dap"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-dap"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-dap-ui"
   },
   ["nvim-dap-virtual-text"] = {
     loaded = true,

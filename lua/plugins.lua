@@ -57,8 +57,6 @@ return require('packer').startup(function()
 
   use 'gruvbox-community/gruvbox'   
 
-  use 'Yggdroot/indentLine'
-
   use 'glepnir/galaxyline.nvim'
 
   use { 'tpope/vim-surround' }
@@ -110,7 +108,7 @@ return require('packer').startup(function()
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}, {'nvim-telescope/telescope-media-files.nvim'}}
   }
 
-  use { 'nvim-telescope/telescope-fzy-native.nvim' }
+  use { 'nvim-telescope/telescope-fzy-native.nvim', run = 'make' }
 
   use { 'nvim-telescope/telescope-fzf-writer.nvim' }
 
@@ -130,7 +128,7 @@ return require('packer').startup(function()
 
   use {"windwp/nvim-ts-autotag"}
 
-  -- use { 'nvim-treesitter/completion-treesitter' }
+  use { 'nvim-treesitter/completion-treesitter' }
 
   use {"windwp/nvim-autopairs"}
 
@@ -141,6 +139,7 @@ return require('packer').startup(function()
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- NVIM-DAP
+  use { "rcarriga/nvim-dap-ui" }
 
   use { 'mfussenegger/nvim-dap' }
 

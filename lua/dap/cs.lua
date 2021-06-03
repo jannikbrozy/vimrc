@@ -1,25 +1,25 @@
 local dap = require('dap')
-local cwd = vim.fn.getcwd();
+local pwd = vim.fn.getcwd()
 local pid = vim.fn.getpid()
 
 dap.adapters.cs = {
     type = "executable";
-    cwd = "/home/jannik/.omnisharp/omnisharp-vscode";
-    command = "csharp";
+    cwd = pwd;
+    command  = '/usr/local/netcoredbg'; 
+    args = {
+    '--interpreter=vscode'
+    };
 }
 
 dap.configurations.cs = {
   {
+      name = "netcoredbg";
       type = "cs";
       request = "launch";
-      program = "${workspaceFolder}/bin/Debug/netcoreapp3.1/test.dll";
+      program = "${workspaceFolder}/bin/Debug/net5.0/test.dll";
       args = {};
-      name = ".NET Core Launch (console)";
       stopAtEntry = true;
-      console = "internalConsole";
-      serverReadyAction = {
-        action= "openExternally",
-        pattern= "\\bNow listening on:\\s+(https?://\\S+)"
-      };
+      cwd = pwd;
+      env = {};
   }
 }
