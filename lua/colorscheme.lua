@@ -1,1 +1,1 @@
-require('colorbuddy').colorscheme('zephyr')
+vim.cmd('colorscheme base16-ashes')

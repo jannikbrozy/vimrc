@@ -39,13 +39,18 @@ return require('packer').startup(function()
 
   use { 'prettier/vim-prettier' }
 
+  use { 'stevearc/aerial.nvim' }
+
+  use {'tamago324/nlsp-settings.nvim' }
+
   -- SNIPPETS 
 
   use { 'norcalli/snippets.nvim' }
 
   -- THEMES & DESIGN
+  use { 'RRethy/nvim-base16' }
 
-  use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
+  use { 'lukas-reineke/indent-blankline.nvim' }
 
   use 'norcalli/nvim-colorizer.lua'
 
@@ -63,7 +68,8 @@ return require('packer').startup(function()
 
   use { 'romainl/Apprentice' } -- best theme
 
-  -- use { 'tjdevries/cyclist.vim' }
+  use 'NLKNguyen/papercolor-theme'
+
   use { 'RRethy/vim-illuminate' }
 
   use 'tjdevries/cyclist.vim'
@@ -91,8 +97,6 @@ return require('packer').startup(function()
   use { 'romgrk/barbar.nvim' }
 
   use { 'maaslalani/nordbuddy' }
-
-  use '~/Projects/zephyr-nvim/'
 
   -- STARTIFY
   use { 'mhinz/vim-startify' }
