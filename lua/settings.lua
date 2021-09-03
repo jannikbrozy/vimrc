@@ -49,12 +49,9 @@ vim.cmd('set clipboard+=unnamedplus')                 --Don't pass messages to |
 vim.cmd('set omnifunc=v:lua.vim.lsp.omnifunc')                 --Don't pass messages to |ins-completion-menu|.
 vim.cmd('set undodir=~/.local/share/nvim/undodir')
 vim.cmd('set inccommand=split') -- Make substitution work in realtime
---
--- vim.cmd("set list lcs=eol:↲,tab:»,trail:·,extends:<,precedes:>,nbsp:␣") -- Make substitution work in realtime
--- vim.g.listchars = ""
--- vim.g.indent_blankline_char = '|'
 
 vim.g.indent_blankline_show_end_of_line = 'v:true'
 vim.g.indent_blankline_use_treesitter = 'v:true'
+
 -- vim.g.indent_blankline_space_char="·"
 vim.o.completeopt = "menuone,noinsert,noselect"

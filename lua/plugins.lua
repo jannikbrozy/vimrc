@@ -111,7 +111,7 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}, {'nvim-telescope/telescope-media-files.nvim'}}
   }
-
+  -- packer
   use { 'nvim-telescope/telescope-fzy-native.nvim', run = 'make' }
 
   use { 'nvim-telescope/telescope-fzf-writer.nvim' }
@@ -141,7 +141,8 @@ return require('packer').startup(function()
   use { 'nvim-lua/lsp_extensions.nvim' }
 
   use 'JoosepAlviste/nvim-ts-context-commentstring'
-
+  use { 'rktjmp/lush.nvim'}
+  use { 'metalelf0/jellybeans-nvim' }
   -- NVIM-DAP
   use { "rcarriga/nvim-dap-ui" }
 
