@@ -15,7 +15,7 @@ require('telescope').setup{
     initial_mode = "insert",
     selection_strategy = "reset",
     sorting_strategy = "descending",
-    layout_strategy = "vertical",
+    layout_strategy = "horizontal",
     layout_config = {
       horizontal = {
         mirror = false,
@@ -42,6 +42,3 @@ require('telescope').setup{
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
   }
 }
-
-require('telescope').load_extension('media_files')
-require('telescope').load_extension('dap')

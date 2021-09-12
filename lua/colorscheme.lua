@@ -1,1 +1,1 @@
-vim.cmd('colorscheme jellybeans-nvim')
+vim.cmd('colorscheme nightfox')

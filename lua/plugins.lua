@@ -16,140 +16,94 @@ vim.cmd [[packadd packer.nvim]]
 -- vim._update_package_paths()
 
 return require('packer').startup(function()
+  use '/home/jannik/Projects/jmaps'
+
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim', opt = true}
 
-  use 'norcalli/nvim.lua'
+  use 'glepnir/dashboard-nvim'
+  use 'b0o/mapx.nvim'
 
-  -- LSP
+  use "folke/lua-dev.nvim"
+  --markdown
+  use 'ellisonleao/glow.nvim'
 
-  use { 'neovim/nvim-lspconfig' }
-
-  use { 'ojroques/nvim-lspfuzzy' }
-
-  use { 'nvim-lua/lsp-status.nvim' }
-
-  use { 'anott03/nvim-lspinstall' }
-
-  use { 'hrsh7th/nvim-compe' }
-
-  use { 'kristijanhusak/vim-dadbod-completion' }
-
-  use { 'kosayoda/nvim-lightbulb' }
-
-  use { 'prettier/vim-prettier' }
-
-  use { 'stevearc/aerial.nvim' }
-
-  use {'tamago324/nlsp-settings.nvim' }
-
-  -- SNIPPETS 
-
-  use { 'norcalli/snippets.nvim' }
-
-  -- THEMES & DESIGN
-  use { 'RRethy/nvim-base16' }
-
-  use { 'lukas-reineke/indent-blankline.nvim' }
-
-  use 'norcalli/nvim-colorizer.lua'
-
-  use 'norcalli/nvim-terminal.lua'  
-
-  use 'tjdevries/colorbuddy.vim'   
-
-  use 'tjdevries/gruvbuddy.nvim'   
-
-  use 'gruvbox-community/gruvbox'   
-
-  use 'glepnir/galaxyline.nvim'
-
-  use { 'tpope/vim-surround' }
-
-  use { 'romainl/Apprentice' } -- best theme
-
-  use 'NLKNguyen/papercolor-theme'
-
-  use { 'RRethy/vim-illuminate' }
-
-  use 'tjdevries/cyclist.vim'
-
-  use 'godlygeek/tabular'        -- Quickly align text by pattern
-
-  use 'tpope/vim-commentary'     -- Easily comment out lines or objects
-
-  use 'tpope/vim-repeat'         -- Repeat actions better
-
-  use 'tpope/vim-abolish'        -- Cool things with words!
-  
-  use 'tpope/vim-characterize'
-
-  use 'tpope/vim-dispatch'
-
-  use 'AndrewRadev/splitjoin.vim'
-
-  use 'AndrewRadev/sideways.vim' -- Easy sideways movement
-
-  use 'kyazdani42/nvim-web-devicons'
-
-  use 'kyazdani42/nvim-tree.lua'
-
-  use { 'romgrk/barbar.nvim' }
-
-  use { 'maaslalani/nordbuddy' }
-
-  -- STARTIFY
-  use { 'mhinz/vim-startify' }
-
-  -- GIT
-
-  use { 'tpope/vim-fugitive' }
-
-  -- TELESCOPE
+  --treesitter
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
+  use "steelsojka/pears.nvim"
 
   use {
-    'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}, {'nvim-telescope/telescope-media-files.nvim'}}
+      "blackCauldron7/surround.nvim",
+      config = function()
+          require"surround".setup {mappings_style = "surround"}
+      end
   }
-  -- packer
-  use { 'nvim-telescope/telescope-fzy-native.nvim', run = 'make' }
 
-  use { 'nvim-telescope/telescope-fzf-writer.nvim' }
+  use 'junegunn/fzf.vim'
+  -- For Packer
+  use 'EdenEast/nightfox.nvim'
 
-  use { 'nvim-telescope/telescope-packer.nvim' }
+  --explorer
+  use {
+      'kyazdani42/nvim-tree.lua'
+  }
+  --telescope
+  use {
+      'nvim-telescope/telescope.nvim',
+      requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use 'nvim-lua/popup.nvim'
 
-  use { 'nvim-telescope/telescope-github.nvim' }
+  --note taking
+  use "oberblastmeister/neuron.nvim"
+  use 'jbyuki/nabla.nvim'
 
-  use { 'nvim-telescope/telescope-symbols.nvim' }
+  --lsp
+  use 'neovim/nvim-lspconfig'
+  use 'RishabhRD/popfix'
+  use 'RishabhRD/nvim-lsputils'
+  use 'glepnir/lspsaga.nvim'
 
-  use { 'alexaandru/nvim-lspupdate' }
+  use {
+      'williamboman/nvim-lsp-installer',
+  }
 
-  -- TREESITTER
+  --statusline
+  use 'Famiu/feline.nvim'
 
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  --completion
+  use {
+      "hrsh7th/nvim-cmp",
+      requires = {
+          "L3MON4D3/LuaSnip",
+          "saadparwaiz1/cmp_luasnip",
+          "hrsh7th/cmp-buffer",
+          "hrsh7th/cmp-nvim-lsp",
+          "hrsh7th/cmp-path",
+          "hrsh7th/cmp-nvim-lua",
+      },
+  }
 
-  use { 'nvim-treesitter/nvim-treesitter-refactor' }
+  use {
+      "folke/trouble.nvim",
+      config = function()
+          require("trouble").setup {
+              -- your configuration comes here
+              -- or leave it empty to use the default settings
+              -- refer to the configuration section below
+          }
+      end
+  }
 
-  use {"windwp/nvim-ts-autotag"}
+  use 'AckslD/nvim-whichkey-setup.lua'
+  use 'liuchengxu/vim-which-key'
 
-  use { 'nvim-treesitter/completion-treesitter' }
+  --tools
+  use 'famiu/bufdelete.nvim'
 
-  use {"windwp/nvim-autopairs"}
-
-  use { 'p00f/nvim-ts-rainbow' }
-
-  use { 'nvim-lua/lsp_extensions.nvim' }
-
-  use 'JoosepAlviste/nvim-ts-context-commentstring'
-  use { 'rktjmp/lush.nvim'}
-  use { 'metalelf0/jellybeans-nvim' }
-  -- NVIM-DAP
-  use { "rcarriga/nvim-dap-ui" }
-
-  use { 'mfussenegger/nvim-dap' }
-
-  use { 'theHamsta/nvim-dap-virtual-text' }
-
-  use { 'nvim-telescope/telescope-dap.nvim' }
-
+  --icons
+  use 'kyazdani42/nvim-web-devicons'
 end)

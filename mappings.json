@@ -1,0 +1,101 @@
+{
+    "insert_mode" : [
+    ],
+    "normal_mode" : [
+        {
+            "key": "K",
+            "func" : "<cmd> lua require('lspsaga.hover').render_hover_doc()<CR>'", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "<C-f>",
+            "func" : "<cmd> lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "<C-b>",
+            "func" : "<cmd> lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "bs",
+            "func" : "<cmd> lua require('lspsaga.signaturehelp).signature_help()<CR>", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "gr",
+            "func" : "<cmd> lua require('lspsaga.rename).rename()<CR>", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "gd",
+            "func" : "<cmd> lua require('lspsaga.provider).preview_definition()<CR>", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "<leader>cd",
+            "func" : "<cmd> lua require('lspsaga.diagnostic).show_line_diagnostics()<CR>", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "<leader>cc",
+            "func" : "<cmd> lua require('lspsaga.diagnostic).show_cursor_diagnostics()<CR>", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "<C-n>",
+            "func" : ":NvimTreeToggle<CR>", 
+            "silent" : true,
+            "noremap" : true
+        },
+        {
+            "key": "<leader>ff",
+            "func" : "<cmd>lua require('telescope.builtin').find_files()<cr>", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "<leader>fg",
+            "func" : "<cmd>lua require('telescope.builtin').live_grep()<cr>", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "<leader>fb",
+            "func" : "<cmd>lua require('telescope.builtin').buffers()<cr>", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "<leader>fh",
+            "func" : "<cmd>lua require('telescope.builtin').help_tags()<cr>", 
+            "silent" : false,
+            "noremap" : true
+        }
+    ],
+    "visual_mode" : [ 
+        {
+            "key": "<C-m>",
+            "func" : "<cmd>lua require('lspsaga.codeaction').range_code_action()<CR>", 
+            "silent" : false,
+            "noremap" : true
+        }
+    ],
+    "visual_block_mode" : [
+
+    ],
+    "command_mode" : [
+
+    ],
+    "term_mode" : [
+
+    ]
+}

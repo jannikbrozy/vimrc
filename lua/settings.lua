@@ -46,7 +46,6 @@ utils.opt('o', 'updatetime', 300)
 
 vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-completion-menu|.
 vim.cmd('set clipboard+=unnamedplus')                 --Don't pass messages to |ins-completion-menu|.
-vim.cmd('set omnifunc=v:lua.vim.lsp.omnifunc')                 --Don't pass messages to |ins-completion-menu|.
 vim.cmd('set undodir=~/.local/share/nvim/undodir')
 vim.cmd('set inccommand=split') -- Make substitution work in realtime
 
@@ -54,4 +53,6 @@ vim.g.indent_blankline_show_end_of_line = 'v:true'
 vim.g.indent_blankline_use_treesitter = 'v:true'
 
 -- vim.g.indent_blankline_space_char="·"
-vim.o.completeopt = "menuone,noinsert,noselect"
+-- vim.o.completeopt = "menuone,noinsert,noselect"
+
+vim.g.dashboard_default_executive ='telescope'
