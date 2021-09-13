@@ -145,6 +145,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-cmp"
   },
+  ["nvim-fzf"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-fzf"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer"
@@ -156,6 +160,10 @@ _G.packer_plugins = {
   ["nvim-lsputils"] = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-lsputils"
+  },
+  ["nvim-tabline"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/nvim-tabline"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -194,10 +202,31 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  ["sqlite.lua"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/sqlite.lua"
+  },
   ["surround.nvim"] = {
     config = { "\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\19mappings_style\rsurround\nsetup\rsurround\frequire\0" },
     loaded = true,
     path = "/home/jannik/.local/share/nvim/site/pack/packer/start/surround.nvim"
+  },
+  ["telescope-frecency.nvim"] = {
+    config = { "\27LJ\2\nM\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\rfrecency\19load_extension\14telescope\frequire\0" },
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/telescope-frecency.nvim"
+  },
+  ["telescope-fzy-native.nvim"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim"
+  },
+  ["telescope-packer.nvim"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/telescope-packer.nvim"
+  },
+  ["telescope-project.nvim"] = {
+    loaded = true,
+    path = "/home/jannik/.local/share/nvim/site/pack/packer/start/telescope-project.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -215,14 +244,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: surround.nvim
-time([[Config for surround.nvim]], true)
-try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\19mappings_style\rsurround\nsetup\rsurround\frequire\0", "config", "surround.nvim")
-time([[Config for surround.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
+-- Config for: telescope-frecency.nvim
+time([[Config for telescope-frecency.nvim]], true)
+try_loadstring("\27LJ\2\nM\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\rfrecency\19load_extension\14telescope\frequire\0", "config", "telescope-frecency.nvim")
+time([[Config for telescope-frecency.nvim]], false)
+-- Config for: surround.nvim
+time([[Config for surround.nvim]], true)
+try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\19mappings_style\rsurround\nsetup\rsurround\frequire\0", "config", "surround.nvim")
+time([[Config for surround.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

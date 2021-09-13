@@ -38,19 +38,32 @@ return require('packer').startup(function()
   use {
       "blackCauldron7/surround.nvim",
       config = function()
-          require"surround".setup {mappings_style = "surround"}
+          require"surround".setup { mappings_style = "surround" }
       end
   }
 
   use 'junegunn/fzf.vim'
   -- For Packer
   use 'EdenEast/nightfox.nvim'
+  use 'nvim-telescope/telescope-packer.nvim'
 
   --explorer
   use {
       'kyazdani42/nvim-tree.lua'
   }
   --telescope
+  use {
+      'nvim-telescope/telescope-frecency.nvim',
+      config = function()
+          require('telescope').load_extension('frecency')
+      end,
+      requires = { 'tami5/sqlite.lua' }
+  }
+  use {
+      '/home/jannik/Projects/telescope-project.nvim'
+  }
+
+  use 'nvim-telescope/telescope-fzy-native.nvim'
   use {
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
@@ -62,6 +75,7 @@ return require('packer').startup(function()
   use 'jbyuki/nabla.nvim'
 
   --lsp
+  use 'vijaymarupudi/nvim-fzf'
   use 'neovim/nvim-lspconfig'
   use 'RishabhRD/popfix'
   use 'RishabhRD/nvim-lsputils'
@@ -72,7 +86,11 @@ return require('packer').startup(function()
   }
 
   --statusline
-  use 'Famiu/feline.nvim'
+  use { 
+      'Famiu/feline.nvim',
+  }
+
+  use 'crispgm/nvim-tabline'
 
   --completion
   use {

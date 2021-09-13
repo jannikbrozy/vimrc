@@ -79,6 +79,18 @@
             "func" : "<cmd>lua require('telescope.builtin').help_tags()<cr>", 
             "silent" : false,
             "noremap" : true
+        },
+        {
+            "key": "<leader><leader>",
+            "func" : "<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>", 
+            "silent" : false,
+            "noremap" : true
+        },
+        {
+            "key": "<leader>pp",
+            "func" : "<cmd> :lua require'telescope'.extensions.project.project{}<CR>", 
+            "silent" : false,
+            "noremap" : true
         }
     ],
     "visual_mode" : [ 
